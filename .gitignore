@@ -38,3 +38,28 @@ hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
+
+# kotlin
+
+*.kotlin_bin/
+.kotlin/
+
+# minecraft/mod specific
+
+*.jar
+!gradle*.jar
+!**/src/**/resources/**/*.jar
+
+# logs
+
+logs/
+*.log
+
+# temp files
+
+*.tmp
+*.temp
+
+# system files
+
+Thumbs.db
