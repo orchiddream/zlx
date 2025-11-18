@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "zlx",
+	"version": "${version}",
+	"name": "自动种花机",
+	"description": "一个可以在玩家周围自动种植花朵的Fabric模组。",
+	"authors": [
+		"kjsjs"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/zlx/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "com.example.Zlx",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "com.example.ZlxClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"zlx.mixins.json",
+		{
+			"config": "zlx.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.3",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
